@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Support;
+namespace Rozeo\Support;
 
 class Path
 {

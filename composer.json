@@ -1,0 +1,16 @@
+{
+    "name": "rozeo/my-supporter",
+    "authors": [
+        {
+            "name": "rozeo",
+            "email": "st.prog0908@gmail.com"
+        }
+    ],
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "Rozeo\\Support\\": "src/"
+        }
+    }
+}

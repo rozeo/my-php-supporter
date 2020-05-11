@@ -109,7 +109,7 @@ class ArrayAccess implements ArrayAccessInterface
         }
 
         if ($this->arr[$key] instanceof ArrayAccessInterface) {
-            $this->arr[$key]->offsetSet($offset);
+            $this->arr[$key]->offsetSet($offset, $value);
         } else {
             throw new InvalidArgumentException('Invalid offset.');
         }

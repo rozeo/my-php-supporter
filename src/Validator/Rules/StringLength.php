@@ -3,13 +3,11 @@
 
 namespace Rozeo\Support\Validator\Rules;
 
-use Rozeo\Support\RuleInterface;
-use rozeo\Support\Validator\DefaultRuleTrait;
+use Rozeo\Support\Validator\Rule;
+use Rozeo\Support\Validator\RuleInterface;
 
-class StringLength implements RuleInterface
+class StringLength extends Rule
 {
-    use DefaultRuleTrait;
-
     public function min(string $value, int $length): bool
     {
         return mb_strlen($value) >= $length;

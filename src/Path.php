@@ -13,7 +13,16 @@ class Path
 
     public function __construct(string $path)
     {
-        $this->path = realpath($path);
+        $info = pathinfo(urldecode($path));
+
+        $this->path = join(
+            DIRECTORY_SEPARATOR,
+            [
+                preg_replace('/\.\.[\\\\\/]?/', '', $info['dirname']),
+                $info['basename'],
+            ]
+        );
+
         $this->path = rtrim($this->path, self::TRIM_MASK);
     }
 
@@ -22,7 +31,7 @@ class Path
         $path = ltrim($path, self::TRIM_MASK);
 
         return new Path(join(DIRECTORY_SEPARATOR, [
-            $this->path,
+            $this->get(),
             $path,
         ]));
     }
@@ -30,5 +39,10 @@ class Path
     public function get(): string
     {
         return $this->path;
+    }
+
+    public function realpath(): string
+    {
+        return realpath($this->path) ?: '';
     }
 }

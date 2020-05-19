@@ -6,7 +6,9 @@
             "email": "st.prog0908@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "doctrine/annotations": "^1.10"
+    },
 
     "autoload": {
         "psr-4": {

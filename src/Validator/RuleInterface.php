@@ -1,6 +1,6 @@
 <?php
 
-namespace Rozeo\Support;
+namespace Rozeo\Support\Validator;
 
 interface RuleInterface
 {

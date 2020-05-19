@@ -1,10 +1,8 @@
 <?php
 
-namespace rozeo\Support\Validator;
+namespace Rozeo\Support\Validator;
 
-use Rozeo\Support\RuleInterface;
-
-trait DefaultRuleTrait
+class Rule implements RuleInterface
 {
     public function parseArguments(string $argString): array
     {

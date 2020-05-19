@@ -3,14 +3,16 @@
 
 namespace Rozeo\Support\Validator\Rules;
 
+use Rozeo\Support\Validator\Rule;
+use Rozeo\Support\Validator\RuleInterface;
 
-use Rozeo\Support\RuleInterface;
-use rozeo\Support\Validator\DefaultRuleTrait;
-
-class Type implements RuleInterface
+/**
+ * Class Type
+ * @package Rozeo\Support\Validator\Rules
+ * @Target()
+ */
+class Type extends Rule
 {
-    use DefaultRuleTrait;
-
     public function name($value, string $types): bool
     {
 
